@@ -61,14 +61,14 @@
 
   main {
     max-width: 800px;
-    margin: 3rem auto;
+    margin: 3.2rem auto;
     background-color: var(--background-color);
   }
 
   h1 {
     position: absolute;
-    top: 6rem;
-    right: 36.5rem;
+    top: 6.2rem;
+    right: 33rem;
     color: var(--text-color);
   }
 
