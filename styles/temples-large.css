@@ -61,14 +61,25 @@
 
   main {
     max-width: 800px;
-    margin: 3.2rem auto;
+    margin: 2.6rem auto;
     background-color: var(--background-color);
   }
 
   h1 {
     position: absolute;
-    top: 6.2rem;
-    right: 33rem;
+    top: 6rem;
+    right: 38.9rem;
+    color: var(--text-color);
+  }
+
+  main h2 {
+    font-family: var(--heading-font);
+    grid-column: 1 / -1;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0.3rem 0 1rem;
+    padding-bottom: 0.1rem;
+    border-bottom: 3px solid var(--accent1-color);
     color: var(--text-color);
   }
 
