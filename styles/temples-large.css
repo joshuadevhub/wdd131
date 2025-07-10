@@ -39,7 +39,7 @@
 
   main {
     max-width: 800px;
-    margin: 2.6rem auto;
+    margin: 2.2rem auto 0.5rem auto;
   }
 
   h1 {
@@ -51,8 +51,8 @@
   main h2 {
     grid-column: 1 / -1;
     text-align: center;
-    margin: 0.3rem 0 1rem;
-    padding-bottom: 0.1rem;
+    margin: 1rem 0 0 0.1rem;
+    padding-bottom: 0.3rem;
     border-bottom: 3px solid var(--accent1-color);
   }
 
