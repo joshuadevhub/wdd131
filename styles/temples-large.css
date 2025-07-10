@@ -8,8 +8,6 @@
   #header-txt {
     font-weight: bold;
     padding-left: 1rem;
-    display: block;
-    color: var(--text-color);
   }
 
   nav {
@@ -33,7 +31,6 @@
   .navigation a {
     display: block;
     padding: 0.5rem 1rem;
-    text-decoration: none;
   }
 
   #menu {
@@ -43,25 +40,20 @@
   main {
     max-width: 800px;
     margin: 2.6rem auto;
-    background-color: var(--background-color);
   }
 
   h1 {
     position: absolute;
     top: 6rem;
-    right: 38.9rem;
-    color: var(--text-color);
+    right: 35.4rem;
   }
 
   main h2 {
-    font-family: var(--heading-font);
     grid-column: 1 / -1;
-    font-size: 1.8rem;
     text-align: center;
     margin: 0.3rem 0 1rem;
     padding-bottom: 0.1rem;
     border-bottom: 3px solid var(--accent1-color);
-    color: var(--text-color);
   }
 
   .image-album {
