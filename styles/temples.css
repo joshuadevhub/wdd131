@@ -109,6 +109,7 @@ main h1 {
   text-align: center;
   padding-bottom: 1rem;
   font-family: var(--heading-font);
+  outline: 1px solid var(--secondary-color);
 }
 
 main h2 {
