@@ -1,23 +1,11 @@
-:root {
-  --background-color: #F2F2F2;
-  --primary-color: #BBDFF5;
-  --secondary-color: #E3C78C;
-  --accent1-color: #5A666D;
-  --text-color: #2B2B2B;
-  --heading-font: "Merriweather", serif;
-  --body-font: "Lato", sans-serif;
-}
-
 @media screen and (min-width: 720px) {
   header {
     display: grid;
     grid-template-columns: 2fr 1fr auto;
     align-items: center;
-    background-color: var(--primary-color);
   }
 
   #header-txt {
-    font-size: 2rem;
     font-weight: bold;
     padding-left: 1rem;
     display: block;
@@ -46,13 +34,6 @@
     display: block;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    background-color: var(--accent1-color);
-  }
-
-  .navigation a:hover {
-    background-color: var(--secondary-color);
-    color: #333;
-    font-weight: 700;
   }
 
   #menu {
