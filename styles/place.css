@@ -1,0 +1,241 @@
+:root {
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Lato", sans-serif;
+  --primary-color: #005724;
+  --secondary-color: #087f0e;
+  --text-color: #fff;
+  --background-color: #ededed;
+  --Highlight: #061802;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--body-font);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  color: #fff;
+}
+
+main,
+section,
+header,
+footer {
+  max-width: 370px;
+  margin: 0 auto;
+  display: block;
+}
+
+main .space {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+picture {
+  max-width: 370px;
+  display: block;
+  width: 100%;
+}
+
+main picture img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+main .box-data1 {
+  background-color: var(--text-color);
+  padding: 10px;
+  margin: 3px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+main .box-data1 h2 {
+  padding: 1rem 0;
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  text-align: center;
+  max-width: 90%;
+}
+
+main .box-data1 ul {
+  list-style: none;
+  padding: 0 1rem 0 0;
+  margin: 0 auto;
+
+}
+
+main .box-data1 li {
+  font-size: 1.1rem;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  align-items: end;
+  column-gap: 0.5rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.country-info li {
+  /* background-color: var(--text-color); */
+  /* border-radius: 5px; */
+  padding: 6px;
+  margin: 4px;
+  color: var(--primary-color);
+}
+
+.box-data1 li strong {
+  display: inline-block;
+  min-width: 120px;
+  max-width: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  padding-right: 0.25rem;
+  color: navy;
+}
+
+.country-info {
+  background-color: var(--text-color);
+}
+
+.country-info li,
+.country-info h2 {
+  color: var(--primary-color);
+}
+
+.country-info img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 3rem;
+  padding: 0 0 2rem 0;
+  color: var(--primary-color);
+  margin: 0 auto;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--background-color);
+  text-align: center;
+}
+
+footer p {
+  padding-bottom: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  main.hero-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  main .space {
+    display: none;
+  }
+
+  picture {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .left-box,
+  .right-box {
+    position: absolute;
+    z-index: 2;
+
+  }
+
+  .left-box {
+    left: 30px;
+    top: 2rem;
+  }
+
+  main .box-data1 h2 {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.4rem 1.5rem;
+    left: 0;
+    transform: translate(-0.7rem, 0.25rem);
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  section.right-box h2::after {
+    content: "⛅";
+    padding-left: 1rem;
+    display: inline;
+  }
+
+  .right-box {
+    right: 30px;
+    bottom: 2rem;
+  }
+
+  .box-data1 {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+
+  }
+
+  main,
+  section,
+  header,
+  footer {
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .country-info img {
+    display: none;
+  }
+
+  main .box-data1 {
+    padding: 3px;
+  }
+
+  main .box-data1 li {
+    font-size: 0.9rem;
+    padding: 2px;
+  }
+}

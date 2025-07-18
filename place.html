@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WDD131 | Nigeria at a Glance | Elemide Joshua Damilare</title>
+
+  <meta name="description"
+    content="Explore key facts about Nigeria including its weather, population, languages, currency, timezone, calling code, and more">
+  <meta name="keywords"
+    content="Nigeria, Nigerian weather, Nigeria population, Nigeria language, Nigerian currency, timezone, calling code" />
+  <meta name="author" content="Elemide Joshua Damilare">
+
+  <link rel="shortcut icon" href="../wdd131/images/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../wdd131/styles/place.css">
+
+  <script src="../wdd131/scripts/place.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Nigeria</h1>
+  </header>
+
+  <main class="hero-container">
+    <div class="space"></div>
+    <picture>
+      <source srcset="images/nigeria-desktop.webp" media="(min-width: 768px)">
+      <img src="../wdd131/images/nigeria-mobile.webp" alt="">
+    </picture>
+
+    <section class="left-box">
+      <div class="box-data1 country-info">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area: </strong>923,769km²</li>
+          <li><strong>Population: </strong>237,527,782</li>
+          <li><strong>Capital: </strong>Abuja</li>
+          <li><strong>Languages: </strong>Hausa, Igbo, Yoruba</li>
+          <li><strong>Currencies: </strong>Naira ₦</li>
+          <li><strong>Time Zones: </strong>UTC +1, WAT, DST</li>
+          <li><strong>Calling Codes: </strong>+234</li>
+          <li><strong>Internet TLD: </strong>.ng</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="right-box">
+      <div class="box-data1 country-info">
+        <h2> Weather</h2>
+        <img src="../wdd131/images/cloud-sun-fill.svg" alt="">
+        <ul>
+          <li id="temperature"><strong>Temperature: </strong>10&deg;C</li>
+          <li><strong>Conditions: </strong>Partly Cloudy</li>
+          <li id="wind"><strong>Wind: </strong>5km/h</li>
+          <li><strong>Wind Chill: </strong> <span id="wind-chill"></span></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="current-year"></span> | Joshua Elemide Damilare | Nigeria</p>
+    <p id="last-modified"></p>
+  </footer>
+
+</body>
+
+</html>
