@@ -25,10 +25,10 @@ header {
   background-color: var(--primary-color);
   width: 100%;
   padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-  text-align: center;
   font-family: var(--heading-font);
   color: #fff;
 }
@@ -53,6 +53,7 @@ picture {
   max-width: 370px;
   display: block;
   width: 100%;
+  margin: 0 auto;
 }
 
 main picture img {
@@ -79,11 +80,12 @@ main .box-data1 h2 {
   font-family: var(--heading-font);
   text-align: center;
   max-width: 90%;
+  margin: 0 auto;
 }
 
 main .box-data1 ul {
   list-style: none;
-  padding: 0 1rem 0 0;
+  /* padding: 0 1rem 0 0; */
   margin: 0 auto;
 
 }
@@ -99,8 +101,8 @@ main .box-data1 li {
 }
 
 .country-info li {
-  /* background-color: var(--text-color); */
-  /* border-radius: 5px; */
+  background-color: var(--text-color);
+  border-radius: 5px;
   padding: 6px;
   margin: 4px;
   color: var(--primary-color);
@@ -156,8 +158,6 @@ footer p {
 
   main.hero-container {
     max-width: 100%;
-    width: 100%;
-    margin: 0 auto;
     position: relative;
   }
 
@@ -166,9 +166,8 @@ footer p {
   }
 
   picture {
-    display: block;
     width: 100%;
-    max-width: 100%;
+    max-width: none;
   }
 
   picture img {
@@ -197,7 +196,7 @@ footer p {
     padding: 0.4rem 1.5rem;
     left: 0;
     transform: translate(-0.7rem, 0.25rem);
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
     text-align: left;
   }
 
