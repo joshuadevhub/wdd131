@@ -99,8 +99,11 @@ const temples = [
 
 createTempleCard(temples);
 function createTempleCard(filteredTemples) {
+  const container = document.querySelector(".image-album");
+  container.innerHTML = ""; // clear previous
   filteredTemples.forEach(temple => {
     let card = document.createElement("section");
+    card.classList.add("card");
     let name = document.createElement("h3");
     let location = document.createElement("p");
     let dedicated = document.createElement("p");
@@ -108,9 +111,9 @@ function createTempleCard(filteredTemples) {
     let img = document.createElement("img");
 
     name.textContent = temple.templeName;
-    location.innerHTML = `<span>Location:</span> ${temple.location}`;
-    dedicated.innerHTML = `<span>Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span>Size:</span> ${temple.area} sq ft`;
+    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+    dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
     img.setAttribute("src", temple.imageUrl);
     img.setAttribute("alt", `${temple.templeName} Temple`);
     img.setAttribute("loading", "lazy");
@@ -124,3 +127,24 @@ function createTempleCard(filteredTemples) {
     document.querySelector(".image-album").appendChild(card);
   })
 }
+const filters = {
+  old: t => parseInt(t.dedicated) < 1900,
+  new: t => parseInt(t.dedicated) > 2000,
+  large: t => t.area > 90000,
+  small: t => t.area < 10000,
+};
+
+document.querySelectorAll(".navigation a").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const id = link.id;
+
+    const filterFn = filters[id]; // Will be undefined for "home"
+
+    const filteredTemples = filterFn ? temples.filter(filterFn) : temples;
+    createTempleCard(filteredTemples);
+  });
+});
+
+// Show all on page load
+createTempleCard(temples);
