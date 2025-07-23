@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 1px auto;
+  max-width: 400px;
+}
+
+img {
+  background-color: #000;
+  width: 100%;
+  animation: fade 10s;
+
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
