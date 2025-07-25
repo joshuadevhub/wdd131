@@ -19,7 +19,7 @@ buttonToggle.addEventListener("click", () => {
 const temples = [
   {
     templeName: "Aba, Nigeria",
-    location: "Aba, Abia,  Nigeria",
+    location: "Aba, Nigeria",
     dedicated: "2005, August, 7",
     area: 11500,
     imageUrl:
@@ -27,7 +27,7 @@ const temples = [
   },
   {
     templeName: "Manti Utah",
-    location: "Manti, United ",
+    location: "Manti,Utah, United States",
     dedicated: "1888, May, 21",
     area: 74792,
     imageUrl:
@@ -35,7 +35,7 @@ const temples = [
   },
   {
     templeName: "Payson Utah",
-    location: "Payson, United ",
+    location: "Payson, Utah, United States",
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
@@ -51,8 +51,8 @@ const temples = [
   },
   {
     templeName: "Washington D.C.",
-    location: "Kensington, United ",
-    dedicated: "1974, june,19",
+    location: "Kensington, Maryland, U.S",
+    dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
@@ -67,8 +67,8 @@ const temples = [
   },
   {
     templeName: "Mexico City Mexico",
-    location: "Mexico , Mexico",
-    dedicated: "1983, December,2",
+    location: "Mexico City, Mexico",
+    dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
@@ -81,20 +81,55 @@ const temples = [
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-54641-thumb.jpg"
   },
   {
-    templeName: "Austin Texas Temple",
+    templeName: "Austin Texas",
     location: "Cedar Park, Texas",
     dedicated: " 2024, August, 17",
     area: 30000,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/austin-texas-temple/austin-texas-temple-40361-thumb.jpg"
   },
 
-  // {
-  //   templeName: "Cagayan de Oro Philippines Temple",
-  //   location: "Cagayan de Oro City, Misamis",
-  //   dedicated: "2024, August, 31 ",
-  //   area: 18449,
-  //   imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/cagayan-de-oro-philippines-temple/cagayan-de-oro-philippines-temple-50369-main.jpg"
-  // }
+  {
+    templeName: "Natal Brazil",
+    location: "Av. Senador Salgado Filho",
+    dedicated: "2025, May, 17",
+    area: 19800,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/natal-brazil-temple/natal-brazil-temple-45005-thumb.jpg"
+  },
+  {
+    templeName: "Mount Timpanogos Utah",
+    location: "American Fork, Utah, U.S",
+    dedicated: "1996, October, 13-19",
+    area: 107240,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mount-timpanogos-utah-temple/mount-timpanogos-utah-temple-60331-thumb.jpg"
+  },
+  {
+    templeName: "Cape Town South Africa",
+    location: "3 Liesbeek Ave Observatory",
+    dedicated: "None ",
+    area: 9500,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/cape-town-south-africa-temple/cape-town-south-africa-temple-23846-thumb.jpg"
+  },
+  {
+    templeName: "Salt Lake",
+    location: "Salt Lake City, Utah ",
+    dedicated: "1893, April, 6,",
+    area: 382207,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-6813-thumb.jpg"
+  },
+  {
+    templeName: "Praia Cape Verde",
+    location: "Bairro Taiti 7600 Praia Santiago",
+    dedicated: "2022, June, 19,",
+    area: 8759,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/praia-cape-verde-temple/praia-cape-verde-temple-27204-main.jpg"
+  },
+  {
+    templeName: "Seoul Korea",
+    location: "Seoul-teukbyeols South Korea",
+    dedicated: "1985, December, 14",
+    area: 28057,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/seoul-korea-temple/seoul-korea-temple-22305-main.jpg"
+  },
 ];
 
 createTempleCard(temples);
@@ -127,24 +162,50 @@ function createTempleCard(filteredTemples) {
     document.querySelector(".image-album").appendChild(card);
   })
 }
-const filters = {
-  old: t => parseInt(t.dedicated) < 1900,
-  new: t => parseInt(t.dedicated) > 2000,
-  large: t => t.area > 90000,
-  small: t => t.area < 10000,
-};
 
-document.querySelectorAll(".navigation a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const id = link.id;
 
-    const filterFn = filters[id]; // Will be undefined for "home"
-
-    const filteredTemples = filterFn ? temples.filter(filterFn) : temples;
-    createTempleCard(filteredTemples);
-  });
+let smallTemple = document.getElementById("small");
+let small = temples.filter(temple => {
+  return temple.area < 10000
 });
 
-// Show all on page load
-createTempleCard(temples);
+smallTemple.addEventListener("click", () => {
+  createTempleCard(small)
+})
+
+
+let oldTemple = document.getElementById("old");
+let old = temples.filter(temple => {
+  let year = parseInt(temple.dedicated.split(",")[0].trim());
+
+  return !isNaN(year) && year < 2000;
+
+});
+
+oldTemple.addEventListener('click', () => {
+  createTempleCard(old)
+});
+
+let newTemple = document.getElementById("new");
+let newT = temples.filter(temple => {
+  let year = parseInt(temple.dedicated.split(",")[0].trim());
+
+  return !isNaN(year) && year > 2000;
+});
+newTemple.addEventListener("click", () => {
+  createTempleCard(newT)
+});
+
+let largeTemple = document.getElementById("large");
+let large = temples.filter(temple => {
+  return temple.area > 90000
+});
+
+largeTemple.addEventListener("click", () => {
+  createTempleCard(large)
+})
+
+let home = document.getElementById("home");
+home.addEventListener("click", () => {
+  createTempleCard(temples)
+})
