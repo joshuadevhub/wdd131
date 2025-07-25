@@ -178,7 +178,7 @@ let oldTemple = document.getElementById("old");
 let old = temples.filter(temple => {
   let year = parseInt(temple.dedicated.split(",")[0].trim());
 
-  return !isNaN(year) && year < 2000;
+  return !isNaN(year) && year < 1900;
 
 });
 
