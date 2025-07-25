@@ -18,6 +18,10 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 header {
@@ -101,6 +105,7 @@ header.open nav {
 main {
   max-width: 375px;
   margin: 0 auto;
+  flex: 1;
 
 }
 
@@ -142,7 +147,7 @@ main h2 {
 footer {
   background-color: var(--primary-color);
   font-size: 1.2rem;
-  padding: 1.2rem 0.2rem 0.5rem 0.2rem;
+  padding: 1.2rem 0.2rem 12rem 0.2rem;
   width: 100%;
   height: 5rem;
   color: var(--text-color);
