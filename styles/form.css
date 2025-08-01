@@ -115,9 +115,10 @@
 
  .rating-option {
    display: flex;
+   flex-wrap: nowrap;
    justify-content: space-around;
    align-items: center;
-   width: 100%;
+   width: auto;
    max-width: 100%;
    margin-top: -0.3rem;
  }
@@ -128,8 +129,11 @@
    align-items: center;
    justify-content: space-around;
    cursor: pointer;
-   width: 100%;
-   max-width: 100%;
+   /* width: auto; */
+   min-width: 60px;
+   /* max-width: 100px; */
+   flex: 1 1 80px;
+   /* min-width: 60px; */
  }
 
  .rating-items input {
@@ -194,7 +198,20 @@
 
  @media screen and (max-width: 1100px) {
    .wrapper {
-     width: min(900px, 100%);
+     width: min(600px, 100%);
      border-radius: 0;
    }
+
+   /* .rating-option {
+     align-items: stretch;
+   }
+
+   .rating-items {
+     justify-content: space-between;
+   }
+
+   .rating-items span {
+     flex: 1;
+     text-align: left;
+   } */
  }
