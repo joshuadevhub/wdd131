@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WDD131 | Product Review Form | Elemide Joshua Damilare</title>
+
+  <meta name="description" content="A product review form page with submission confirmation and counter.">
+  <meta name="author" content="Elemide Joshua Damilare">
+  <meta name="keywords" content="product review, review form, feedback, rating, customer opinion, product evaluation">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <!-- <h2>Product Review</h2> -->
+      <form method="get" action="review.html" novalidate>
+
+        <div class="select">
+          <!-- Product Name Select -->
+          <label for="productSelect"> Product Name<span aria-hidden="true">*</span></label>
+          <select name="product" id="product-select" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- Options Populated By Javascript -->
+          </select>
+        </div>
+
+        <div class="rating">
+          <!-- Overall Rating (Radio Buttons 1 - 5) -->
+          <p>Overall Rating</p>
+          <div class="rating-option">
+
+            <label class="rating-items">
+              <span>&#9734;</span>
+              <input type="radio" name="rating" id="rating1" value="1" required />
+            </label>
+
+            <label class="rating-items">
+              <span>&#9734; &#9734;</span>
+              <input type="radio" name="rating" id="rating2" value="2">
+            </label>
+
+            <label class="rating-items">
+              <span>&#9734; &#9734; &#9734;</span>
+              <input type="radio" name="rating" id="rating3" value="3">
+            </label>
+
+            <label class="rating-items">
+              <span>&#9734; &#9734; &#9734; &#9734;</span>
+              <input type="radio" name="rating" id="rating4" value="4" />
+            </label>
+
+            <label class="rating-items">
+              <span>&#9734; &#9734; &#9734; &#9734; &#9734;</span>
+              <input type="radio" name="rating" id="rating5" value="5" />
+            </label>
+          </div>
+        </div>
+
+        <div class="installation">
+          <!-- Date Of Installation -->
+          <label for="installedDate"> Date Of Installation<input type="date" name="installedDate" id="installedDate"
+              required></label>
+        </div>
+
+
+        <div class="features">
+          <p>Which features did you useful in the product? (Check All That Apply)</p>
+          <!-- Usefull Features (CheckBoxes) -->
+          <div class="feature">
+            <div class="feature-class">
+              <input type="checkbox" id="feature-durability" name="features" value="durability">
+              <label for="feature-durability"> Durability</label>
+            </div>
+
+            <div class="feature-class">
+              <input type="checkbox" id="feature-ease" name="features" value="ease-of-use">
+              <label for="feature-ease">Ease of Use</label>
+            </div>
+
+            <div class="feature-class">
+              <input type="checkbox" id="feature-performance" name="features" value="performance">
+              <label for="feature-performance">Performance</label>
+            </div>
+
+            <div class="feature-class">
+              <input type="checkbox" id="feature-design" name="features" value="design">
+              <label for="feature-design">Design</label>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="review">
+          <!-- Written Reviews -->
+          <label for="writtenReview">Written Reviews (Optional) <textarea name="review" id="writtenReview" rows="5"
+              cols="50"></textarea></label>
+        </div>
+
+        <div class="name">
+          <!-- User Name -->
+          <label for="username">Your Name (Optional)<input type="text" name="username" id="username"></label>
+        </div>
+
+
+        <!-- Submit Form -->
+        <input type="submit" value="Post Review">
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© <span id="current-year"></span> | Elemide Joshua Damilare | Nigeria</p>
+    <p id="last-modified"></p>
+  </footer>
+
+</body>
+
+</html>
