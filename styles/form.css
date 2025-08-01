@@ -48,7 +48,7 @@
 
  .wrapper {
    width: max(40%, 600px);
-   background-color: #ffffff;
+   background-color: #f0f0f0;
    border-radius: 0 15px 15px 0;
    padding: 20px;
    display: flex;
@@ -111,6 +111,14 @@
    padding: 10px;
    font-size: 1.1rem;
    margin-top: 0.4rem;
+   border: none;
+ }
+
+ .wrapper .select select:focus,
+ .wrapper .installation input:focus,
+ .wrapper .name input:focus,
+ .wrapper .review textarea:focus {
+   outline: none;
  }
 
  .rating-option {
@@ -118,22 +126,21 @@
    flex-wrap: nowrap;
    justify-content: space-around;
    align-items: center;
-   width: auto;
-   max-width: 100%;
-   margin-top: -0.3rem;
+   /* width: auto; */
+   /* max-width: 100%;
+   margin-top: -0.3rem; */
  }
 
  .rating-items {
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-around;
+   justify-content: center;
    cursor: pointer;
    /* width: auto; */
-   min-width: 60px;
-   /* max-width: 100px; */
-   flex: 1 1 80px;
-   /* min-width: 60px; */
+   min-width: 50px;
+   max-width: 80px;
+   flex: 1 1 0;
  }
 
  .rating-items input {
@@ -144,7 +151,8 @@
  .rating-items span {
    margin-bottom: 0.25rem;
    color: var(--accent2-color);
-   font-weight: bold;
+   font-weight: bolder;
+   font-size: 0.7rem;
  }
 
  .wrapper .features .feature {
@@ -158,6 +166,7 @@
 
  .wrapper .features .feature-class label {
    padding-left: 5px;
+   font-size: 1.2rem;
  }
 
  input[type="checkbox"],
@@ -201,17 +210,4 @@
      width: min(600px, 100%);
      border-radius: 0;
    }
-
-   /* .rating-option {
-     align-items: stretch;
-   }
-
-   .rating-items {
-     justify-content: space-between;
-   }
-
-   .rating-items span {
-     flex: 1;
-     text-align: left;
-   } */
  }
