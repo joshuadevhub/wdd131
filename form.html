@@ -29,15 +29,16 @@
   <main>
     <div class="wrapper">
       <!-- <h2>Product Review</h2> -->
-      <form method="get" action="review.html" novalidate>
+      <form method="get" action="review.html" id="form">
 
         <div class="select">
           <!-- Product Name Select -->
-          <label for="product-select"> Product Name<span aria-hidden="true">*</span></label>
+          <label for="product-select"> Product Name</label>
           <select name="product" id="product-select" required>
             <option value="" disabled selected>Select a Product ...</option>
             <!-- Options Populated By Javascript -->
           </select>
+          <p class="error-message" id="product-error"></p>
         </div>
 
         <div class="rating">
@@ -70,17 +71,19 @@
               <input type="radio" name="rating" id="rating5" value="5">
             </label>
           </div>
+          <p class="error-message" id="rating-error"></p>
         </div>
 
         <div class="installation">
           <!-- Date Of Installation -->
           <label for="installedDate"> Date Of Installation<input type="date" name="installedDate" id="installedDate"
               required></label>
+          <p class="error-message" id="date-error"></p>
         </div>
 
 
         <div class="features">
-          <p>Which features did you useful in the product? (Check All That Apply)</p>
+          <p>Which features did you find useful in the product? (Check All That Apply)</p>
           <!-- Usefull Features (CheckBoxes) -->
           <div class="feature">
             <div class="feature-class">
@@ -103,7 +106,6 @@
               <label for="feature-design">Design</label>
             </div>
           </div>
-
         </div>
 
 
@@ -118,12 +120,10 @@
           <label for="username">Your Name (Optional)<input type="text" name="username" id="username"></label>
         </div>
 
-
         <!-- Submit Form -->
         <input type="submit" value="Post Review">
       </form>
     </div>
-
   </main>
 
   <footer>

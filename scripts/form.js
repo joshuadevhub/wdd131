@@ -6,6 +6,8 @@ year.innerHTML = today.getFullYear();
 
 lastModified.innerHTML = document.lastModified;
 
+
+
 // Create The Array Of Products
 const products = [
   {
@@ -59,6 +61,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // // Validate Form Require Input
+  // let form = document.getElementById("form");
+  // form.addEventListener("submit", (e) => {
+  //   let valid = true;
+
+  //   // Product validation
+  //   let productError = document.getElementById('product-error');
+  //   if (productSelect.value === "") {
+  //     productError.innerHTML = "Please select a product.";
+  //     valid = false;
+  //   } else {
+  //     productError.textContent = "";
+  //   }
+
+  //   // Rating validation
+  //   const ratingInputs = document.querySelectorAll('input[name="rating"]');
+  //   const ratingError = document.getElementById('rating-error');
+  //   let ratingSelected = false;
+  //   ratingInputs.forEach((input) => {
+  //     if (input.checked) ratingSelected = true;
+  //   });
+  //   if (!ratingSelected) {
+  //     ratingError.textContent = "Please select a rating.";
+  //     valid = false;
+  //   } else {
+  //     ratingError.textContent = "";
+  //   }
+
+  //   // Date validation
+  //   const dateInput = document.getElementById('installedDate');
+  //   const dateError = document.getElementById('date-error');
+  //   if (!dateInput.value) {
+  //     dateError.textContent = "Please select a date.";
+  //     valid = false;
+  //   } else {
+  //     dateError.textContent = "";
+  //   }
+
+  //   // Prevent form submit if any field is invalid
+  //   if (!valid) {
+  //     e.preventDefault();
+  //   }
+  // });
+
   // Check If We Are On The Review.html Page
   if (window.location.pathname.includes("review.html")) {
     // Get The Current Review Count From LocalStorage
@@ -80,3 +126,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
