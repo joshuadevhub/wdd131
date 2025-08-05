@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel Mind College - Home</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <img src="images/website_logo.webp" alt="Excel Mind College Logo" class="logo">
+
+    <p class="main-heading">ExcelMind College</p>
+
+    <nav>
+      <ul class="sidebar" id="sidebar">
+        <li id="close"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
+              width="26px" fill="#e3e3e3">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+        <li class="list-items"> <a href="index.html">Home</a></li>
+        <li class="list-items"> <a href="admission.html">Admission</a></li>
+        <li class="list-items"> <a href="about.html">About</a></li>
+        <li class="list-items"> <a href="#">Contact</a></li>
+        <li class="list-items"> <a href="#"> blog</a></li>
+      </ul>
+
+      <ul>
+        <li class="hideOnMobile"> <a href="index.html">Home</a></li>
+        <li class="hideOnMobile"> <a href="admission.html">Admission</a></li>
+        <li class="hideOnMobile"> <a href="about.html">About</a></li>
+        <li class="hideOnMobile"> <a href="#">Contact</a></li>
+        <li class="hideOnMobile"> <a href="#"> blog</a></li>
+        <li id="menu"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
+              width="26px" fill="#e3e3e3">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <img src="images/school_building2.webp" alt="ExcelMind Building">
+    <h1>Welcome to Excel Mind College</h1>
+    <p class="tagline">Raising Tomorrow''s Leaders Today</p>
+    <a class="cta-btn" href="admission.html">Apply Now</a>
+  </section>
+
+  <section class="intro">
+    <p>We provide excellent training in Science, Arts, and Technology, empowering students with the skills and mindset
+      to thrive.</p>
+  </section>
+
+  <div class="filters">
+    <button id="all">All</button>
+    <button id="science">Science</button>
+    <button id="arts">Arts</button>
+    <button id="tech">Tech</button>
+  </div>
+
+  <section id="streams" class="stream-container">
+
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <div id="testimonialBox" class="testimonial-box"></div>
+    <button id="nextTestimonial">Next</button>
+  </section>
+
+  <section class="newsletter">
+    <form action="#" id="newsletter-form">
+      <h3>Subscribe to Our Newsletter</h3>
+
+      <div class="form-control">
+        <label for="sub-email">Email</label>
+
+        <input type="email" id="sub-email" name="email" placeholder="Enter your email">
+
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+          <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" class="checkmark" />
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            class="close" />
+        </svg>
+
+        <small id="error-message">Error Message</small>
+      </div>
+
+      <input type="submit" value="Subscribe" id="subscribeBtn">
+    </form>
+
+  </section>
+
+
+  <section class="map">
+    <h3>Visit Us</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.741977705424!2d3.39763801477315!3d7.06270711846454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a499c98c709e7%3A0xc889f1e2bf1dfcb7!2sNigeria!5e0!3m2!1sen!2sng!4v1690997416956!5m2!1sen!2sng"
+      loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Excel Mind College</p>
+    <div class="social-icons">
+      <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
+      <a href="mailto:info@excelmind.edu"><img src="email.svg" alt="Email" /></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

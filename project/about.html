@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Excel Mind College</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <script src="scripts/about.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <img src="images/website_logo.webp" alt="Excel Mind College Logo" class="logo">
+
+    <p class="main-heading">ExcelMind College</p>
+
+    <nav>
+      <ul class="sidebar" id="sidebar">
+        <li id="close"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
+              width="26px" fill="#e3e3e3">
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg></a></li>
+        <li class="list-items"> <a href="index.html">Home</a></li>
+        <li class="list-items"> <a href="admission.html">Admission</a></li>
+        <li class="list-items"> <a href="about.html">About</a></li>
+        <li class="list-items"> <a href="#">Contact</a></li>
+        <li class="list-items"> <a href="#"> blog</a></li>
+      </ul>
+
+      <ul>
+        <li class="hideOnMobile"> <a href="index.html">Home</a></li>
+        <li class="hideOnMobile"> <a href="admission.html">Admission</a></li>
+        <li class="hideOnMobile"> <a href="about.html">About</a></li>
+        <li class="hideOnMobile"> <a href="#">Contact</a></li>
+        <li class="hideOnMobile"> <a href="#"> blog</a></li>
+        <li id="menu"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
+              width="26px" fill="#e3e3e3">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <img src="images/school_building2.webp" alt="ExcelMind Building">
+    <h1>About Excel Mind College</h1>
+    <p class="tagline">Excellence. Discipline. Vision.</p>
+  </section>
+
+  <section class="intro">
+    <p>Founded in 2005, Excel Mind College is dedicated to shaping well-rounded students through a balance of academics,
+      character, and creativity.</p>
+  </section>
+
+  <section class="testimonial-box mission-box" id="testimonialBox">
+    <h2>Our Mission</h2>
+    <p>To nurture and inspire students by providing excellent education, promoting leadership, and fostering innovation
+      through Science, Arts, and Technology.</p>
+  </section>
+
+  <section class="testimonial-box mission-box">
+    <h2>Our Core Values</h2>
+    <ul>
+      <li>🔍 Curiosity and Lifelong Learning</li>
+      <li>🌱 Growth and Discipline</li>
+      <li>🤝 Respect and Integrity</li>
+      <li>🚀 Creativity and Innovation</li>
+    </ul>
+  </section>
+
+  <section class="team">
+    <h2>Meet Our Team</h2>
+
+    <section id="team-profile" class="stream-container">
+
+    </section>
+  </section>
+
+  <section class="newsletter">
+
+    <form id="newsletter-form">
+      <h3>Send Us a Message</h3>
+
+      <div class="form-control">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" placeholder="Your Name">
+        <small id="error-message">Error Message</small>
+      </div>
+
+      <div class="form-control">
+        <label for="contact-message">Send Us Your Thought</label>
+        <textarea id="contact-message" placeholder="Your Message" rows="4"></textarea>
+        <small id="error-message">Error Message</small>
+      </div>
+
+      <input type="submit" value="Send Message">
+    </form>
+
+    <div id="messageConfirm" class="confirmation"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Excel Mind College</p>
+    <div class="social-icons">
+      <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
+      <a href="mailto:info@excelmind.edu"><img src="email.svg" alt="Email" /></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
