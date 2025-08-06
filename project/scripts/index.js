@@ -193,16 +193,6 @@ function setSuccessFor(input) {
   formControl.className = "form-control success";
 }
 
-// document.getElementById("subscribeBtn").addEventListener("click", () => {
-//   const email = document.getElementById("subEmail").value;
-//   if (email) {
-//     let subs = JSON.parse(localStorage.getItem("subscribers")) || [];
-//     subs.push({ email });
-//     localStorage.setItem("subscribers", JSON.stringify(subs));
-//     alert(`Thanks for subscribing, ${email}!`);
-//     document.getElementById("subEmail").value = "";
-//   }
-// });
 // ===== Newsletter Form + LocalStorage + MODAL =====
 const emailInput = document.getElementById("sub-email");
 

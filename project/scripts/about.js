@@ -81,34 +81,58 @@ const form = document.getElementById("newsletter-form");
 const contactName = document.getElementById("contact-name");
 const contactMessage = document.getElementById("contact-message");
 
+// === MODAL SELECTORS ===
+const modal = document.getElementById("subscribeModal");
+const modalText = document.getElementById("modalText");
+const modalClose = document.getElementById("modalClose");
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
   checkInput();
 });
 
 function checkInput() {
-  // Get the input values
   const contactNameValue = contactName.value.trim();
   const contactMessageValue = contactMessage.value.trim();
 
+  let valid = true; // track if all inputs are valid
+
   if (contactNameValue === '') {
     setErrorMessage(contactName, "Name Cannot Be Empty!");
+    valid = false;
   } else {
     setSuccessMessage(contactName);
   }
 
   if (contactMessageValue === '') {
     setErrorMessage(contactMessage, "Message Cannot Be Empty!");
+    valid = false;
   } else {
     setSuccessMessage(contactMessage);
+  }
+
+  // 👉 Only if both are valid
+  if (valid) {
+    const contactData = {
+      name: contactNameValue,
+      message: contactMessageValue
+    };
+    localStorage.setItem("contactMessageData", JSON.stringify(contactData));
+
+    // Personalized modal
+    openModal(`Thank you, ${contactNameValue}, your message has been sent!`);
+
+    // Reset form & remove green borders
+    form.reset();
+    document.querySelectorAll(".form-control").forEach(fc => {
+      fc.className = "form-control";
+    });
   }
 }
 
 function setErrorMessage(input, message) {
   const formControl = input.parentElement;
   const errorMessage = formControl.querySelector("#error-message");
-
   errorMessage.textContent = message;
   formControl.className = "form-control error";
 }
@@ -118,17 +142,59 @@ function setSuccessMessage(input) {
   formControl.className = "form-control success";
 }
 
-// document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+// === MODAL FUNCTIONS ===
+function openModal(message) {
+  modalText.textContent = message;
+  modal.classList.add("show");
+}
+
+function closeModal() {
+  modal.classList.remove("show");
+  setTimeout(() => {
+    modalText.textContent = "";
+  }, 300);
+}
+modalClose.addEventListener("click", closeModal);
+
+
+
+// const form = document.getElementById("newsletter-form");
+// const contactName = document.getElementById("contact-name");
+// const contactMessage = document.getElementById("contact-message");
+
+// form.addEventListener("submit", (e) => {
 //   e.preventDefault();
-//   const name = document.getElementById("contact-name").value;
-//   const message = document.getElementById("contact-message").value;
 
-//   const note = { name, message };
-//   let messages = JSON.parse(localStorage.getItem("schoolMessages")) || [];
-//   messages.push(note);
-//   localStorage.setItem("schoolMessages", JSON.stringify(messages));
-
-//   document.getElementById("messageConfirm").innerHTML = `
-//       <p>Thank you <strong>${name}</strong>, your message has been received.</p>`;
-//   document.getElementById("newsletter-form").reset();
+//   checkInput();
 // });
+
+// function checkInput() {
+//   // Get the input values
+//   const contactNameValue = contactName.value.trim();
+//   const contactMessageValue = contactMessage.value.trim();
+
+//   if (contactNameValue === '') {
+//     setErrorMessage(contactName, "Name Cannot Be Empty!");
+//   } else {
+//     setSuccessMessage(contactName);
+//   }
+
+//   if (contactMessageValue === '') {
+//     setErrorMessage(contactMessage, "Message Cannot Be Empty!");
+//   } else {
+//     setSuccessMessage(contactMessage);
+//   }
+// }
+
+// function setErrorMessage(input, message) {
+//   const formControl = input.parentElement;
+//   const errorMessage = formControl.querySelector("#error-message");
+
+//   errorMessage.textContent = message;
+//   formControl.className = "form-control error";
+// }
+
+// function setSuccessMessage(input) {
+//   const formControl = input.parentElement;
+//   formControl.className = "form-control success";
+// }
