@@ -4,6 +4,8 @@
   --accent1-color: #306bac;
   --accent2-color: #4562f2;
   --accent3-color: #98b9f2;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Lato", sans-serif;
 }
 
 * {
