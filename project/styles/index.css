@@ -37,7 +37,7 @@ header .logo {
 }
 
 header .main-heading {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   display: none;
 }
@@ -64,7 +64,7 @@ header a {
   padding: 0 25px;
   text-decoration: none;
   color: #f0f0f0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 100%;
 }
 
@@ -122,6 +122,10 @@ nav .sidebar .list-items:hover {
   display: none;
 }
 
+main {
+  margin: 0.5rem 0;
+}
+
 .hero {
   position: relative;
 }
@@ -138,16 +142,16 @@ nav .sidebar .list-items:hover {
   position: absolute;
   top: 2rem;
   left: 3rem;
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .hero .tagline {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 8px 0;
   position: absolute;
   top: 6rem;
   left: 5rem;
-  color: #fff;
+  color: var(--secondary-color);
 
 }
 
@@ -155,7 +159,7 @@ nav .sidebar .list-items:hover {
   background: #f77f00;
   padding: 10px 18px;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border: none;
   margin: 0 auto;
   display: block;
@@ -215,20 +219,20 @@ nav .sidebar .list-items:hover {
 
 .stream-card h3 {
   padding: 0.5rem 0;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: var(--accent1-color);
 }
 
 .stream-card p {
   text-align: left;
   margin: 0.8rem 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .stream-card span {
   font-weight: bold;
   color: var(--secondary-color);
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .stream-card img {
@@ -243,7 +247,7 @@ nav .sidebar .list-items:hover {
   background: var(--accent1-color);
   padding: 10px 18px;
   border-radius: 6px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   border: none;
   margin: 0 auto;
   display: block;
@@ -276,7 +280,7 @@ button#nextTestimonial {
   background: var(--accent1-color);
   padding: 12px 30px;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border: none;
   margin: 6px auto;
   display: block;
@@ -314,6 +318,7 @@ button#nextTestimonial:hover {
   text-align: center;
   color: var(--accent1-color);
   padding-bottom: 0.6rem;
+  font-size: 0.8rem;
 }
 
 .form-control {
@@ -322,10 +327,25 @@ button#nextTestimonial:hover {
   margin-bottom: 1.1rem;
 }
 
+.form-radio {
+  margin-bottom: 1.6rem;
+}
+
+.form-radio div {
+  margin-bottom: 1rem;
+}
+
+.form-radio div input {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+
 #newsletter-form div label {
   display: inline-block;
   padding: 0 0 6px 5px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -335,18 +355,20 @@ button#nextTestimonial:hover {
   padding: .85rem 0.7rem;
   border: 1px solid var(--primary-color);
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-color: #f0f0f0;
   outline: none;
 }
 
-.form-control input {
+.form-control input,
+.form-control select {
   width: 100%;
   padding: .85rem 0.7rem;
   border: 1px solid var(--primary-color);
   border-radius: 8px;
   font-size: 1.1rem;
   background-color: #f0f0f0;
+  outline: none;
 }
 
 .form-control.success input {
@@ -398,7 +420,7 @@ input[type="submit"] {
   background-color: var(--accent1-color);
   border-radius: 10px;
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   transition: background-color 350ms ease-in;
   outline: none;
@@ -420,6 +442,8 @@ iframe {
   height: 200px;
   border: none;
   border-radius: 15px;
+  box-shadow: 1px 1px 4px rgba(20, 27, 65, 0.6);
+  margin-top: 1rem;
 }
 
 /* CSS For about.html */
@@ -469,143 +493,6 @@ footer {
   vertical-align: middle;
 }
 
-/* .admission-form {
-  padding: 1.2rem;
-  background: #fff;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.admission-form h2 {
-  margin-bottom: 1rem;
-  color: #1e4a69;
-}
-
-.admission-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.admission-form input,
-.admission-form select,
-.admission-form textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.admission-form button {
-  background: #1e4a69;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.admission-form .confirmation {
-  margin-top: 1rem;
-  background: #d4edda;
-  color: #155724;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-}
-
-.mission,
-.values,
-.team {
-  padding: 1.2rem;
-  background: #fff;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.mission h2,
-.values h2,
-.team h2 {
-  color: #1e4a69;
-  margin-bottom: 10px;
-}
-
-.values ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.values li {
-  padding: 8px 0;
-  font-size: 1rem;
-}
-
-.team-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.team-member {
-  background: #f8f8f8;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.team-member img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.team-member h4 {
-  margin-bottom: 4px;
-  color: #1e4a69;
-}
-
-.contact-box {
-  background: #fff;
-  padding: 1.2rem;
-  margin: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-box h2 {
-  margin-bottom: 10px;
-  color: #1e4a69;
-}
-
-.contact-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-box input,
-.contact-box textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.contact-box button {
-  background: #1e4a69;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-} */
-
 @media screen and (max-width: 800px) {
   .hideOnMobile {
     display: none;
@@ -620,5 +507,53 @@ footer {
   nav .sidebar {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 6px;
+  max-width: 320px;
+  margin: 200px auto;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease;
+}
+
+#modalClose {
+  margin-top: 20px;
+  background: var(--accent1-color);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

@@ -45,76 +45,87 @@
 
   </header>
 
-  <section class="hero">
-    <img src="images/school_building2.webp" alt="ExcelMind Building">
-    <h1>Welcome to Excel Mind College</h1>
-    <p class="tagline">Raising Tomorrow''s Leaders Today</p>
-    <a class="cta-btn" href="admission.html">Apply Now</a>
-  </section>
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/desktop-excelmind-school-building.webp" media="(min-width: 768px)">
+        <img src="images/mobile-excelmind-school-building.webp" alt="ExcelMind Building">
+      </picture>
+      <h1>Welcome to Excel Mind College</h1>
+      <p class="tagline">Raising Tomorrow''s Leaders Today. </p>
+      <a class="cta-btn" href="admission.html">Apply Now</a>
+    </section>
 
-  <section class="intro">
-    <p>We provide excellent training in Science, Arts, and Technology, empowering students with the skills and mindset
-      to thrive.</p>
-  </section>
+    <section class="intro">
+      <p>We provide excellent training in Science, Arts, and Technology, empowering students with the skills and mindset
+        to thrive.</p>
+    </section>
 
-  <div class="filters">
-    <button id="all">All</button>
-    <button id="science">Science</button>
-    <button id="arts">Arts</button>
-    <button id="tech">Tech</button>
-  </div>
+    <div class="filters">
+      <button id="all">All</button>
+      <button id="science">Science</button>
+      <button id="arts">Arts</button>
+      <button id="tech">Tech</button>
+    </div>
 
-  <section id="streams" class="stream-container">
+    <section id="streams" class="stream-container">
 
-  </section>
+    </section>
 
-  <section class="testimonials">
-    <h2>What Our Students Say</h2>
-    <div id="testimonialBox" class="testimonial-box"></div>
-    <button id="nextTestimonial">Next</button>
-  </section>
+    <section class="testimonials">
+      <h2>What Our Students Say</h2>
+      <div id="testimonialBox" class="testimonial-box"></div>
+      <button id="nextTestimonial">Next</button>
+    </section>
 
-  <section class="newsletter">
-    <form action="#" id="newsletter-form">
-      <h3>Subscribe to Our Newsletter</h3>
+    <section class="newsletter">
+      <form action="#" id="newsletter-form">
+        <h3>Subscribe to Our Newsletter</h3>
 
-      <div class="form-control">
-        <label for="sub-email">Email</label>
+        <div class="form-control">
+          <label for="sub-email">Email</label>
 
-        <input type="email" id="sub-email" name="email" placeholder="Enter your email">
+          <input type="email" id="sub-email" name="email" placeholder="Enter your email">
 
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-          <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" class="checkmark" />
-        </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" class="checkmark" />
+          </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            class="close" />
-        </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              class="close" />
+          </svg>
 
-        <small id="error-message">Error Message</small>
+          <small id="error-message">Error Message</small>
+        </div>
+
+        <input type="submit" value="Subscribe" id="subscribeBtn">
+      </form>
+    </section>
+
+    <div class="modal" id="subscribeModal">
+      <div class="modal-content">
+        <p id="modalText"></p>
+        <button id="modalClose">Close</button>
       </div>
+    </div>
 
-      <input type="submit" value="Subscribe" id="subscribeBtn">
-    </form>
+    <section class="map">
+      <h3>Visit Us</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.9823237826095!2d3.268485674236133!3d6.649112193345556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b90bb13abc3df%3A0x129d6953357f3271!2sMeiran%20Rd%2C%20Alimosho%2C%20Abule-Egba%2FAboru%2FMeiran%2FAlagbado%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1754433762912!5m2!1sen!2sng"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
 
-  </section>
-
-
-  <section class="map">
-    <h3>Visit Us</h3>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.741977705424!2d3.39763801477315!3d7.06270711846454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a499c98c709e7%3A0xc889f1e2bf1dfcb7!2sNigeria!5e0!3m2!1sen!2sng!4v1690997416956!5m2!1sen!2sng"
-      loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
 
   <footer>
     <p>© 2025 Excel Mind College</p>
     <div class="social-icons">
-      <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-      <a href="mailto:info@excelmind.edu"><img src="email.svg" alt="Email" /></a>
+      <a href="#"><img src="" alt="Facebook" /></a>
+      <a href="#"><img src="" alt="Instagram" /></a>
+      <a href="mailto:info@excelmind.edu"><img src="" alt="Email" /></a>
     </div>
   </footer>
 

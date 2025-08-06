@@ -45,86 +45,109 @@
 
   </header>
 
-  <section class="hero">
-    <img src="images/school_building2.webp" alt="">
-    <h1>Apply for Admission</h1>
-    <p class="tagline">Your journey starts here</p>
-  </section>
+  <main>
 
-  <section class="intro">
-    <p>We welcome students into a vibrant academic community with strong values and innovative learning environments.
-    </p>
-  </section>
+    <section class="hero">
+      <picture>
+        <source srcset="images/desktop-campusStudent-admission.webp" media="(min-width: 767px)">
+        <img src="images/mobile-campusStudent-admission.webp" alt="">
+      </picture>
+      <h1>Apply for Admission</h1>
+      <p class="tagline">Your journey starts here</p>
+    </section>
 
-  <section class="newsletter">
-    <form id="newsletter-form">
-      <h3>Admission Form</h3>
+    <section class="intro">
+      <p>We welcome students into a vibrant academic community with strong values and innovative learning environments.
+      </p>
+    </section>
 
-      <div class="form-control">
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" placeholder="Enter Your First Name Here">
-        <small id="error-message">Error Message</small>
-      </div>
+    <section class="newsletter">
+      <form id="newsletter-form">
+        <h3>Admission Form</h3>
 
-      <div class="form-control">
-        <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" placeholder="Enter Your Last Name Here">
-        <small id="error-message">Error Message</small>
-      </div>
+        <div class="form-control">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" placeholder="Enter Your First Name Here">
+          <small id="error-message">Error Message</small>
+        </div>
 
-      <div class="form-control">
-        <label for="middlename">Middle Name (Optional)</label>
-        <input type="text" id="middlename" placeholder="Enter Your Middle Name Here">
-        <small id="error-message">Error Message</small>
-      </div>
+        <div class="form-control">
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" placeholder="Enter Your Last Name Here">
+          <small id="error-message">Error Message</small>
+        </div>
 
-      <div class="form-control">
-        <label for="phonenumber"> Phone Number</label>
-        <input type="tel" id="phonenumber" placeholder="Enter Your Phone Number Here">
-        <small id="error-message">Error Message</small>
-      </div>
+        <div class="form-control">
+          <label for="middlename">Middle Name (Optional)</label>
+          <input type="text" id="middlename" placeholder="Enter Your Middle Name Here">
+          <!-- <small id="error-message">Error Message</small> -->
+        </div>
 
-      <div class="form-control">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="someone@gmail.com">
-        <small id="error-message">Error Message</small>
-      </div>
+        <div class="form-radio">
+          <div>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+          </div>
 
-      <div class="form-control">
-        <select name="streamSubject" id="stream">
-          <option value="" disabled selected>Select Stream</option>
-          <!-- <option value="Science">Science</option>
+          <div>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+          </div>
+          <!-- <small id="error-message">Error Message</small> -->
+        </div>
+
+        <div class="form-control">
+          <label for="phonenumber"> Phone Number</label>
+          <input type="tel" id="phonenumber" placeholder="000000000">
+          <small id="error-message">Error Message</small>
+        </div>
+        </div>
+
+
+        <div class="form-control">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="someone@gmail.com">
+          <small id="error-message">Error Message</small>
+        </div>
+
+        <div class="form-control">
+          <label for="streamSubject">Select Stream</label>
+          <select name="streamSubject" id="stream">
+            <option value="" disabled selected>Please Select ...</option>
+            <!-- <option value="Science">Science</option>
           <option value="Arts">Arts</option>
           <option value="Tech">Tech</option> -->
-        </select>
-        <small id="error-message">Error Message</small>
-      </div>
+          </select>
+          <small id="error-message">Error Message</small>
+        </div>
 
-      <div class="form-control">
-        <label for="message">Why Do You Want To Join ExcelMind?</label>
-        <textarea id="message" placeholder="Why do you want to join Excel Mind?" rows="4" required></textarea>
-        <small id="error-message">Error Message</small>
-      </div>
+        <div class="form-control">
+          <label for="message">Why Do You Want To Join ExcelMind?</label>
+          <textarea id="message" placeholder="Why do you want to join Excel Mind?" rows="4"></textarea>
+          <small id="error-message">Error Message</small>
+        </div>
 
-      <input type="submit" value="Enroll">
-    </form>
-    <div id="confirmation" class="confirmation"></div>
-  </section>
+        <input type="submit" value="Enroll">
+      </form>
+      <div id="confirmation" class="confirmation"></div>
+    </section>
 
-  <section class="map">
-    <h3>Campus Location</h3>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.741977705424!2d3.39763801477315!3d7.06270711846454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a499c98c709e7%3A0xc889f1e2bf1dfcb7!2sNigeria!5e0!3m2!1sen!2sng!4v1690997416956!5m2!1sen!2sng"
-      loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
+    <section class="map">
+      <h3>Campus Location</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.9823237826095!2d3.268485674236133!3d6.649112193345556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b90bb13abc3df%3A0x129d6953357f3271!2sMeiran%20Rd%2C%20Alimosho%2C%20Abule-Egba%2FAboru%2FMeiran%2FAlagbado%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1754433762912!5m2!1sen!2sng"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
 
   <footer>
     <p>© 2025 Excel Mind College</p>
     <div class="social-icons">
-      <a href="#"><img src="facebook.svg" alt="Facebook" /></a>
-      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-      <a href="mailto:info@excelmind.edu"><img src="email.svg" alt="Email" /></a>
+      <a href="#"><img src="" alt="Facebook" /></a>
+      <a href="#"><img src="" alt="Instagram" /></a>
+      <a href="mailto:info@excelmind.edu"><img src="" alt="Email" /></a>
     </div>
   </footer>
 

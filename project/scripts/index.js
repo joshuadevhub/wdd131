@@ -15,25 +15,46 @@ closeIcon.addEventListener("click", () => {
 // JavaScript For The Filter And The Stream Subjects index.html
 const streams = [
   {
-    title: "Science Stream",
+    title: "Biological Science Stream",
     category: "Science",
-    desc: "Physics, Chemistry & Biology.",
-    img: "images/health2.webp"
+    desc: "Physics, Chemistry, Biology & Health Science ...",
+    img: "images/biological-stream-image.webp"
   },
 
   {
-    title: "Art & Culture Stream",
+    title: "Humanities Stream",
     category: "Arts",
-    desc: "Literature, Music & Fine Arts.",
-    img: "images/business2.webp"
+    desc: "Literature, Goverenment, English and History ...",
+    img: "images/humanities-stream.webp"
   },
 
   {
-    title: "Tech Innovation Lab Stream",
-    category: "Tech",
-    desc: "Coding, Robotics & AI.",
-    img: "images/computer_science_course.webp"
-  }
+    title: "Business & Management Stream",
+    category: "Commercial",
+    desc: "Office Practices, Economics, Commerce & Marketing.",
+    img: "images/business-stream.webp"
+  },
+
+  {
+    title: "Technological Science Stream",
+    category: "Science",
+    desc: "Physics, Chemistry, Mathematics & Computer Science ...",
+    img: "images/technological-stream.webp"
+  },
+
+  {
+    title: "Performing Art Stream",
+    category: "Arts",
+    desc: "Fine art, Music, Theatre Art and Graphics Designs ...",
+    img: "images/performing-art-stream.webp"
+  },
+
+  {
+    title: "Finance & Accounting Stream",
+    category: "Commercial",
+    desc: "Accounting, Mathematics, Insurance & Economics ...",
+    img: "images/accounting-stream.webp"
+  },
 ];
 createStreamCard(streams);
 function createStreamCard(filteredCard) {
@@ -130,18 +151,33 @@ const email = document.getElementById("sub-email");
 newsLetterForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  checkInput();
+  const emailValue = email.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailValue === "") {
+    setErrorFor(email, "Email Cannot Be Empty!");
+  } else if (!emailRegex.test(emailValue)) {
+    setErrorFor(email, "Please enter a valid email address!");
+  } else {
+    // VALID -> show modal + save to storage
+    localStorage.setItem("newsletterEmail", emailValue);
+    openModal(`Thank you for subscribing, ${emailValue}!`);
+    email.value = "";
+    // remove the green border
+    email.parentElement.className = "form-control";
+  }
+  // checkInput();
 });
 
-function checkInput() {
-  const emailValue = email.value.trim();
+// function checkInput() {
+//   const emailValue = email.value.trim();
 
-  if (emailValue === '') {
-    setErrorFor(email, "Email Cannot Be Empty!");
-  } else {
-    setSuccessFor(email);
-  }
-}
+//   if (emailValue === '') {
+//     setErrorFor(email, "Email Cannot Be Empty!");
+//   } else {
+//     setSuccessFor(email);
+//   }
+// }
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
@@ -157,13 +193,51 @@ function setSuccessFor(input) {
   formControl.className = "form-control success";
 }
 
-document.getElementById("subscribeBtn").addEventListener("click", () => {
-  const email = document.getElementById("subEmail").value;
-  if (email) {
-    let subs = JSON.parse(localStorage.getItem("subscribers")) || [];
-    subs.push({ email });
-    localStorage.setItem("subscribers", JSON.stringify(subs));
-    alert(`Thanks for subscribing, ${email}!`);
-    document.getElementById("subEmail").value = "";
+// document.getElementById("subscribeBtn").addEventListener("click", () => {
+//   const email = document.getElementById("subEmail").value;
+//   if (email) {
+//     let subs = JSON.parse(localStorage.getItem("subscribers")) || [];
+//     subs.push({ email });
+//     localStorage.setItem("subscribers", JSON.stringify(subs));
+//     alert(`Thanks for subscribing, ${email}!`);
+//     document.getElementById("subEmail").value = "";
+//   }
+// });
+// ===== Newsletter Form + LocalStorage + MODAL =====
+const emailInput = document.getElementById("sub-email");
+
+const modal = document.getElementById("subscribeModal");
+const modalText = document.getElementById("modalText");
+const modalClose = document.getElementById("modalClose");
+
+// Show Modal
+function openModal(message) {
+  modalText.textContent = message;
+  modal.classList.add("show");
+}
+
+// Fade Out and Close Modal
+function closeModal() {
+  modal.classList.remove("show");
+  setTimeout(() => {
+    modalText.textContent = "";
+  }, 300);
+}
+
+// Close button
+modalClose.addEventListener("click", closeModal);
+
+// Form submit
+newsLetterForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Only show modal if the user entered a valid email
+  if (emailRegex.test(emailValue)) {
+    localStorage.setItem("newsletterEmail", emailValue);
+    openModal(`Thank you for subscribing, ${emailValue}!`);
+    emailInput.value = "";
   }
 });
+

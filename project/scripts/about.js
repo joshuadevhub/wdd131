@@ -14,21 +14,39 @@ closeIcon.addEventListener("click", () => {
 // About html javascript
 const teamMembers = [
   {
-    name: "Mrs. Adedayo",
+    name: "Mr. and Mrs. Adedayo Johnson",
     desc: "Principal & Academic Head",
-    img: "images/computer_science_instructor.jpg"
+    img: "images/principal_and_vice_principal.webp"
   },
 
   {
-    name: "Mr. Chinedu",
-    desc: "Head of Technology Department",
-    img: "images/computer_science_instructor3.webp"
+    name: "Mr. Samuel Godswill",
+    desc: "Head of Science Department",
+    img: "images/head_of_science_department.webp"
   },
 
   {
-    name: "Mr. Hammed",
-    desc: "Literature & Arts Coordinator",
-    img: "images/health_instructor.webp"
+    name: "Mr. Kehinde Balogun",
+    desc: "Head Of Commercial Department",
+    img: "images/head_of_commercial_department.webp"
+  },
+
+  {
+    name: "Mr. Joshua Elemide",
+    desc: "Senior Physics Teacher",
+    img: "images/physics_teacher.webp"
+  },
+
+  {
+    name: "Mrs. Titi Ogunjimi",
+    desc: "Senior Literature & Commerce Teacher",
+    img: "images/commerce_teacher.webp"
+  },
+
+  {
+    name: "Mrs. Grace Afolabi",
+    desc: "Senior Government Teacher",
+    img: "images/govt_teacher.webp"
   },
 ];
 
@@ -100,17 +118,17 @@ function setSuccessMessage(input) {
   formControl.className = "form-control success";
 }
 
-document.getElementById("newsletter-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const name = document.getElementById("contact-name").value;
-  const message = document.getElementById("contact-message").value;
+// document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const name = document.getElementById("contact-name").value;
+//   const message = document.getElementById("contact-message").value;
 
-  const note = { name, message };
-  let messages = JSON.parse(localStorage.getItem("schoolMessages")) || [];
-  messages.push(note);
-  localStorage.setItem("schoolMessages", JSON.stringify(messages));
+//   const note = { name, message };
+//   let messages = JSON.parse(localStorage.getItem("schoolMessages")) || [];
+//   messages.push(note);
+//   localStorage.setItem("schoolMessages", JSON.stringify(messages));
 
-  document.getElementById("messageConfirm").innerHTML = `
-      <p>Thank you <strong>${name}</strong>, your message has been received.</p>`;
-  document.getElementById("newsletter-form").reset();
-});
+//   document.getElementById("messageConfirm").innerHTML = `
+//       <p>Thank you <strong>${name}</strong>, your message has been received.</p>`;
+//   document.getElementById("newsletter-form").reset();
+// });
