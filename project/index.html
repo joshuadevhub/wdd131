@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Excel Mind College - Home</title>
+  <title>WDD131 | Home | Excel Mind College</title>
 
   <meta name="description"
     content="Excel Mind College provides quality education and skills for future-ready students. Explore programs, streams, and admissions.">
@@ -60,13 +60,27 @@
 
   <main>
     <section class="hero">
-      <picture>
-        <source srcset="images/desktop-excelmind-school-building.webp" media="(min-width: 768px)">
-        <img src="images/mobile-excelmind-school-building.webp" alt="ExcelMind Building">
-      </picture>
-      <h1>Welcome to Excel Mind College</h1>
-      <p class="tagline">Raising Tomorrow''s Leaders Today. </p>
-      <a class="cta-btn" href="admission.html">Apply Now</a>
+
+      <div>
+        <picture>
+          <source srcset="images/desktop-school-building(2).webp" media="(min-width: 768px)">
+          <img src="images/mobile-school-building(2).webp" alt="ExcelMind Building">
+        </picture>
+      </div>
+
+      <div>
+        <div class="second-content">
+          <h1>Where Excellence Meets Opportunity</h1>
+          <p id="tagline">Raising Tomorrow''s Leaders Today.</p>
+          <p class="tagline">“At Excel Mind College, we provide a holistic and future-focused education that challenges
+            every student to discover their unique potential, develop strong moral character, and pursue excellence in
+            academics, leadership, technology, and life. Through innovative teaching, mentoring, and a supportive
+            environment, we prepare young minds to thrive and make meaningful impact in a rapidly changing world.”.</p>
+          <a class="cta-btn" href="admission.html">Apply Now</a>
+        </div>
+
+      </div>
+
     </section>
 
     <section class="intro">
@@ -87,8 +101,11 @@
 
     <section class="testimonials">
       <h2>What Our Students Say</h2>
-      <div id="testimonialBox" class="testimonial-box"></div>
-      <button id="nextTestimonial">Next</button>
+      <div id="testimonialBox" class="testimonial-box">
+        <p class="quote">Our Students Testimonials</p>
+        <h4 class="person"></h4>
+      </div>
+      <!-- <button id="nextTestimonial">Next</button> -->
     </section>
 
     <section class="newsletter">
@@ -134,12 +151,8 @@
 
 
   <footer>
-    <p>© 2025 Excel Mind College</p>
-    <div class="social-icons">
-      <a href="#"><img src="" alt="Facebook" /></a>
-      <a href="#"><img src="" alt="Instagram" /></a>
-      <a href="mailto:info@excelmind.edu"><img src="" alt="Email" /></a>
-    </div>
+    <p>© <span id="current-year"></span> | Excel Mind College | Nigeria</p>
+    <p id="last-modified"></p>
   </footer>
 
 </body>

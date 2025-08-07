@@ -130,18 +130,33 @@ function setSuccessMessage(input) {
 
 const subjectStreams = [
   {
-    name: "Science",
+    name: "Biological Science Stream",
     id: "aa-001"
   },
 
   {
-    name: "Arts",
+    name: "Humanities Stream",
     id: "ab-002"
   },
 
   {
-    name: "Tech",
+    name: "Business and Management Stream",
     id: "ac-003"
+  },
+
+  {
+    name: "Technological Science Stream",
+    id: "ad-004"
+  },
+
+  {
+    name: "Performing Art Stream",
+    id: "ae-005"
+  },
+
+  {
+    name: "Finance and Accounting Stream",
+    id: "af-006"
   },
 ]
 document.addEventListener("DOMContentLoaded", () => {
@@ -157,6 +172,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+// JavaScript For Footer
+const currentYear = document.getElementById("current-year");
+const lastModified = document.getElementById("last-modified");
+
+let today = new Date();
+
+currentYear.textContent = today.getFullYear();
+lastModified.textContent = document.lastModified;
 
 // const form = document.getElementById("newsletter-form");
 // const firstName = document.getElementById("firstname");

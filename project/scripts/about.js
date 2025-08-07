@@ -157,6 +157,15 @@ function closeModal() {
 modalClose.addEventListener("click", closeModal);
 
 
+// JavaScript For Footer
+const currentYear = document.getElementById("current-year");
+const lastModified = document.getElementById("last-modified");
+
+let today = new Date();
+
+currentYear.textContent = today.getFullYear();
+lastModified.textContent = document.lastModified;
+
 
 // const form = document.getElementById("newsletter-form");
 // const contactName = document.getElementById("contact-name");

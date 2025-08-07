@@ -126,24 +126,64 @@ tech.addEventListener("click", () => {
 
 
 // JavaScript For The Student Testimonial
+const quotes = document.querySelector(".quote");
+const person = document.querySelector(".person");
+
 const testimonials = [
-  { name: "Sarah", text: "Excel Mind transformed my life!" },
-  { name: "Daniel", text: "Outstanding teachers and labs." },
-  { name: "Esther", text: "The tech program is world class!" }
+  { name: "Sarah", text: "Excel Mind completely transformed my life. The personalized attention from the teachers and the hands-on practicals gave me the confidence to chase my dreams. I now see myself achieving things I never imagined possible." },
+  { name: "Daniel", text: "The learning environment is top-notch. The teachers truly care about the success of each student, and the labs are equipped with modern tools that make learning both fun and effective. I am proud to be a product of this institution!" },
+  { name: "Esther", text: "I enrolled in the technology program and I can boldly say it is world-class. The curriculum is well structured, practical, and up to date with global trends. Excel Mind has given me the platform and skills to compete anywhere in the world." },
+  { name: "Michael", text: "From the moment I joined Excel Mind, I felt welcomed and supported. The mentorship I received helped me grow not just academically, but personally as well. I can confidently say that this has been a life-changing experience for me." },
+  { name: "Amanda", text: "Excel Mind helped me discover my potential and pushed me to go after my dreams with confidence." },
+  { name: "Leonard", text: "The dedication of the teachers and the quality of the practical sessions made learning truly enjoyable." },
+  { name: "Chisom", text: "Being part of the tech program opened my eyes to endless opportunities in the digital world." },
+  { name: "Tobi", text: "The support and guidance I received here helped me develop not just academically, but personally as well." },
+  { name: "Maria", text: "Excel Mind creates a positive environment that challenges you to grow and become the best version of yourself." },
+  { name: "Grace", text: "What makes Excel Mind unique is the way they push you to become your best self. The programs are challenging yet enjoyable, and the support system from both staff and fellow students is incredible. I've gained knowledge, lifelong friends, and unforgettable memories." }
 ];
 
-let tIndex = 0;
-function showTestimonial() {
-  const t = testimonials[tIndex];
-  document.getElementById("testimonialBox").innerHTML = `
-    <p>"${t.text}"</p><h4>- ${t.name}</h4>`;
-}
-showTestimonial();
+let lastIndex = -1;
 
-document.getElementById("nextTestimonial").addEventListener("click", () => {
-  tIndex = (tIndex + 1) % testimonials.length;
-  showTestimonial();
-});
+function changeTestimonial() {
+  let random;
+  do {
+    random = Math.floor(Math.random() * testimonials.length);
+  } while (random === lastIndex);
+
+  // Fade + slide down out
+  quotes.style.opacity = 0;
+  person.style.opacity = 0;
+  quotes.style.transform = "translateY(30px)";
+  person.style.transform = "translateY(30px)";
+
+
+  setTimeout(() => {
+    quotes.innerText = testimonials[random].text;
+    person.innerText = testimonials[random].name;
+
+    // slide up + Fade In
+    quotes.style.opacity = 1;
+    person.style.opacity = 1;
+    quotes.style.transform = "translateY(-20px)";
+    person.style.transform = "translateY(-20px)";
+
+    // reset back to center after animation
+    setTimeout(() => {
+      quotes.style.transform = "translateY(0)";
+      person.style.transform = "translateY(0)";
+    }, 800);
+
+    lastIndex = random;
+  }, 800);
+}
+
+// initial load
+changeTestimonial();
+
+// rotate every 5 seconds
+setInterval(changeTestimonial, 10000);
+
+
 
 // JavaScript For The NewsLetter Validation
 const newsLetterForm = document.getElementById("newsletter-form");
@@ -231,3 +271,12 @@ newsLetterForm.addEventListener("submit", (e) => {
   }
 });
 
+
+// JavaScript For Footer
+const currentYear = document.getElementById("current-year");
+const lastModified = document.getElementById("last-modified");
+
+let today = new Date();
+
+currentYear.textContent = today.getFullYear();
+lastModified.textContent = document.lastModified;
