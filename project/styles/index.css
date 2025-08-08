@@ -23,6 +23,9 @@ body {
   background: var(--primary-color);
   /* color: #333; */
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header {
@@ -46,7 +49,7 @@ header .logo {
 header .main-heading {
   font-size: 1.6rem;
   font-weight: bold;
-  display: none;
+  /* display: none; */
 }
 
 header ul {
@@ -130,7 +133,8 @@ nav .sidebar .list-items:hover {
 }
 
 main {
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
+  flex: 1;
 }
 
 .hero {
@@ -174,7 +178,8 @@ main {
 
 .intro,
 .testimonials,
-.map {
+.map,
+.maps {
   padding: 1.2rem;
   /* text-align: center; */
   font-size: 1.1rem
@@ -304,17 +309,17 @@ button#nextTestimonial:hover {
 .newsletter {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* width: 100%; */
 }
 
 .newsletter #newsletter-form {
   background-color: #fff;
-  width: 90%;
+  /* width: 100%; */
   margin: 0.6rem 1.2rem;
   padding: 15px;
-  max-width: 100%;
+  /* max-width: 100%; */
   border-radius: 10px;
   box-shadow: 1px 1px 4px rgba(20, 27, 65, 0.6);
 
@@ -325,6 +330,12 @@ button#nextTestimonial:hover {
   color: var(--accent1-color);
   padding-bottom: 0.6rem;
   font-size: 0.8rem;
+}
+
+.newsletter h2 {
+  text-align: center;
+  color: var(--accent1-color);
+  padding-bottom: 1.5rem;
 }
 
 .form-control {
@@ -455,8 +466,12 @@ iframe {
 /* CSS For about.html */
 
 .mission-box {
-  margin: 1rem 1.2rem 2rem 1.2rem;
-  /* width: ; */
+  margin: 1rem 1.2rem 2rem 1rem;
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(20, 27, 65, 0.6);
+  border-radius: 10px;
+  padding: 1rem;
+  /* max-width: 100%; */
 }
 
 .mission-box h2 {
@@ -480,6 +495,9 @@ iframe {
 
 .team h2 {
   text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 0.6rem;
+  font-size: 2rem;
 }
 
 footer {
@@ -487,16 +505,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons img {
-  width: 24px;
-  margin: 0 8px;
-  vertical-align: middle;
 }
 
 .modal {
@@ -563,6 +571,10 @@ footer {
   .tagline {
     display: none;
   }
+
+  .second-content {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -594,20 +606,20 @@ footer {
   }
 
   .hero h1 {
-    margin: -1.1rem auto;
+    margin: 1rem auto;
     display: block;
     font-size: 2.2rem;
     /* text-align: left; */
   }
 
   .hero div .second-content p.tagline {
-    padding-top: 1.5rem;
-    font-size: 1.2rem;
+    padding-top: 2rem;
+    font-size: 1.4rem;
     line-height: 1.3;
   }
 
   .hero div .second-content p#tagline {
-    padding-top: 2.6rem;
+    padding-top: 2rem;
     font-size: 2rem;
   }
 
@@ -644,6 +656,125 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.5rem;
     padding: 0 1rem;
+  }
+
+  .other-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1.5rem 1.5rem;
+    /* gap: 10px; */
+  }
+
+  .testimonials {
+    width: 90%;
+    margin: -1.2rem 1.2rem;
+    padding: 15px;
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .testimonial-box {
+    height: 196px;
+    width: 100%;
+    padding: 15px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(20, 27, 65, 0.6);
+  }
+
+  .testimonials h2,
+  .map h2,
+  .maps h2 {
+    text-align: center;
+  }
+
+  .testimonial-box h4 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .map iframe,
+  .maps iframe,
+  .maps h2 .map h2 {
+    transform: translate(0.6rem, -1.2rem);
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .mission-box h2 {
+    font-size: 2rem;
+  }
+
+  .mission-box p,
+  .mission-box li {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .team {
+    margin-top: 1rem;
+  }
+
+  .stream-container {
+    padding-top: 0.6rem;
+  }
+
+  .form-background {
+    background-color: rgba(20, 27, 65, 0.9);
+    /* background-image: url("../images/desktop-college-student-admission(1).webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    min-height: 100vh;
+    backdrop-filter: blur(3px);
+  }
+
+  .form-background #newsletter-form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding-left: 3.5rem;
+  }
+
+  .admission-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+    margin-left: -1.2rem;
+    flex: 1;
+  }
+
+  .form-background #newsletter-form label {
+    font-size: 1.3rem;
+  }
+
+  .maps {
+    display: none;
+  }
+
+  .admission-form input[type="text"],
+  .admission-form input[type="tel"],
+  .admission-form input[type="email"],
+  .admission-form select,
+  .admission-form textarea#message {
+    width: 90%;
+    display: block;
+    padding: 1.2rem 1rem;
+    font-size: 1.3rem;
+  }
+
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 1.3rem;
   }
 
   /* 

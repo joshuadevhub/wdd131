@@ -81,30 +81,6 @@
         </div>
       </div>
 
-
-    </section>
-
-    <section class="intro">
-      <p>Founded in 2005, Excel Mind College is dedicated to shaping well-rounded students through a balance of
-        academics,
-        character, and creativity.</p>
-    </section>
-
-    <section class="testimonial-box mission-box" id="testimonialBox">
-      <h2>Our Mission</h2>
-      <p>To nurture and inspire students by providing excellent education, promoting leadership, and fostering
-        innovation
-        through Science, Arts, and Technology.</p>
-    </section>
-
-    <section class="testimonial-box mission-box">
-      <h2>Our Core Values</h2>
-      <ul>
-        <li>🔍 Curiosity and Lifelong Learning</li>
-        <li>🌱 Growth and Discipline</li>
-        <li>🤝 Respect and Integrity</li>
-        <li>🚀 Creativity and Innovation</li>
-      </ul>
     </section>
 
     <section class="team">
@@ -113,35 +89,63 @@
       <section id="team-profile" class="stream-container">
 
       </section>
+      
     </section>
 
-    <section class="newsletter">
+    <div class="other-content">
+      <section class="intro">
+        <p>Founded in 2005, Excel Mind College is dedicated to shaping well-rounded students through a balance of
+          academics,
+          character, and creativity.</p>
+      </section>
 
-      <form id="newsletter-form">
-        <h3>Send Us a Message</h3>
+      <section class="mission-box" id="testimonialBox">
+        <h2>Our Mission</h2>
+        <p>To nurture and inspire students by providing excellent education, promoting leadership, and fostering
+          innovation
+          through Science, Arts, and Technology.</p>
+      </section>
 
-        <div class="form-control">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" placeholder="Your Name">
-          <small id="error-message">Error Message</small>
+      <section class="mission-box">
+        <h2>Our Core Values</h2>
+        <ul>
+          <li>🔍 Curiosity and Lifelong Learning</li>
+          <li>🌱 Growth and Discipline</li>
+          <li>🤝 Respect and Integrity</li>
+          <li>🚀 Creativity and Innovation</li>
+        </ul>
+      </section>
+
+
+      <section class="newsletter">
+
+        <form id="newsletter-form">
+          <h3>Send Us a Message</h3>
+
+          <div class="form-control">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" placeholder="Your Name">
+            <small id="error-message">Error Message</small>
+          </div>
+
+          <div class="form-control">
+            <label for="contact-message">Send Us Your Thought</label>
+            <textarea id="contact-message" placeholder="Your Message" rows="1"></textarea>
+            <small id="error-message">Error Message</small>
+          </div>
+
+          <input type="submit" value="Send Message">
+        </form>
+      </section>
+
+      <div class="modal" id="subscribeModal">
+        <div class="modal-content">
+          <p id="modalText"></p>
+          <button id="modalClose">Close</button>
         </div>
-
-        <div class="form-control">
-          <label for="contact-message">Send Us Your Thought</label>
-          <textarea id="contact-message" placeholder="Your Message" rows="4"></textarea>
-          <small id="error-message">Error Message</small>
-        </div>
-
-        <input type="submit" value="Send Message">
-      </form>
-    </section>
-
-    <div class="modal" id="subscribeModal">
-      <div class="modal-content">
-        <p id="modalText"></p>
-        <button id="modalClose">Close</button>
       </div>
     </div>
+
   </main>
 
 
