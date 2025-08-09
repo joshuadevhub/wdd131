@@ -25,14 +25,14 @@
 <body>
 
   <header>
-    <img src="images/website_logo.webp" alt="Excel Mind College Logo" class="logo">
+    <img src="images/website_logo.webp" alt="Excel Mind College Logo" class="logo" width="223" height="180">
 
-    <p class="main-heading">ExcelMind College</p>
+    <h1 class="main-heading">ExcelMind College</h1>
 
     <nav>
       <ul class="sidebar" id="sidebar">
-        <li id="close"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
-              width="26px" fill="#e3e3e3">
+        <li id="close"> <a href="#" aria-label="Close Menu"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+              viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg></a></li>
@@ -49,8 +49,8 @@
         <li class="hideOnMobile"> <a href="about.html">About</a></li>
         <li class="hideOnMobile"> <a href="#">Contact</a></li>
         <li class="hideOnMobile"> <a href="#"> blog</a></li>
-        <li id="menu"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
-              width="26px" fill="#e3e3e3">
+        <li id="menu"> <a href="#" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+              viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
               <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
             </svg></a></li>
       </ul>
@@ -65,14 +65,14 @@
       <div>
         <picture>
           <source srcset="images/desktop-college-student-admission(1).webp" media="(min-width: 767px)">
-          <img src="images/mobile-college-student-admission(1).webp" alt="">
+          <img src="images/mobile-college-student-admission(1).webp" alt="ExcelMind Main Library" width="1080"
+            height="1440">
         </picture>
       </div>
 
       <div>
         <div class="second-content">
-          <h1>Apply for Admission</h1>
-          <!-- <h1>Begin Your Journey to Excellence</h1> -->
+          <h2>Apply for Admission</h2>
           <p id="tagline">Unlocking Bright Futures, One Student at a Time.</p>
           <p class="tagline">“At Excel Mind College, our admissions process is designed to welcome passionate, curious,
             and ambitious learners into a vibrant community where every child is inspired to lead, innovate, and
@@ -82,10 +82,7 @@
             tomorrow.”</p>
         </div>
 
-
       </div>
-
-
     </section>
 
     <section class="intro">
@@ -100,20 +97,22 @@
 
           <div class="form-control">
             <label for="firstname">First Name</label>
-            <input type="text" id="firstname" placeholder="Enter Your First Name Here">
+            <input type="text" id="firstname" placeholder="Enter Your First Name Here" name="firstname"
+              autocomplete="given-name">
             <small id="error-message">Error Message</small>
           </div>
 
           <div class="form-control">
             <label for="lastname">Last Name</label>
-            <input type="text" id="lastname" placeholder="Enter Your Last Name Here">
+            <input type="text" id="lastname" placeholder="Enter Your Last Name Here" name="lastname"
+              autocomplete="family-name">
             <small id="error-message">Error Message</small>
           </div>
 
           <div class="form-control">
             <label for="middlename">Middle Name (Optional)</label>
-            <input type="text" id="middlename" placeholder="Enter Your Middle Name Here">
-            <!-- <small id="error-message">Error Message</small> -->
+            <input type="text" id="middlename" placeholder="Enter Your Middle Name Here" name="middlename"
+              autocomplete="given-name">
           </div>
 
           <div class="form-radio">
@@ -126,19 +125,18 @@
               <input type="radio" name="gender" id="female">
               <label for="female">Female</label>
             </div>
-            <!-- <small id="error-message">Error Message</small> -->
           </div>
 
           <div class="form-control">
             <label for="phonenumber"> Phone Number</label>
-            <input type="tel" id="phonenumber" placeholder="000000000">
+            <input type="tel" id="phonenumber" placeholder="000000000" name="phone" autocomplete="tel">
             <small id="error-message">Error Message</small>
           </div>
 
 
           <div class="form-control">
             <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="someone@gmail.com">
+            <input type="email" id="email" placeholder="someone@gmail.com" name="email" autocomplete="email">
             <small id="error-message">Error Message</small>
           </div>
 
@@ -176,7 +174,7 @@
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.9823237826095!2d3.268485674236133!3d6.649112193345556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b90bb13abc3df%3A0x129d6953357f3271!2sMeiran%20Rd%2C%20Alimosho%2C%20Abule-Egba%2FAboru%2FMeiran%2FAlagbado%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1754433762912!5m2!1sen!2sng"
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade" title="Google Maps location of Excel Mind College"></iframe>
     </section>
   </main>
 
