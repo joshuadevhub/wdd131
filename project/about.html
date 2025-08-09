@@ -24,14 +24,14 @@
 <body>
 
   <header>
-    <img src="images/website_logo.webp" alt="Excel Mind College Logo" class="logo">
+    <img src="images/website_logo.webp" alt="Excel Mind College Logo" class="logo" width="223" height="180">
 
-    <p class="main-heading">ExcelMind College</p>
+    <h1 class="main-heading">ExcelMind College</h1>
 
     <nav>
       <ul class="sidebar" id="sidebar">
-        <li id="close"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
-              width="26px" fill="#e3e3e3">
+        <li id="close"> <a href="#" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+              viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg></a></li>
@@ -48,8 +48,8 @@
         <li class="hideOnMobile"> <a href="about.html">About</a></li>
         <li class="hideOnMobile"> <a href="#">Contact</a></li>
         <li class="hideOnMobile"> <a href="#"> blog</a></li>
-        <li id="menu"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960"
-              width="26px" fill="#e3e3e3">
+        <li id="menu"> <a href="#" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+              viewBox="0 -960 960 960" width="26px" fill="#e3e3e3">
               <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
             </svg></a></li>
       </ul>
@@ -63,7 +63,7 @@
       <div>
         <picture>
           <source srcset="images/desktop-excelmind-school-building.webp" media="(min-width: 768px)">
-          <img src="images/mobile-excelmind-school-building.webp" alt="ExcelMind Building">
+          <img src="images/mobile-excelmind-school-building.webp" alt="ExcelMind Second Building" width="" height="">
         </picture>
       </div>
 
@@ -89,7 +89,7 @@
       <section id="team-profile" class="stream-container">
 
       </section>
-      
+
     </section>
 
     <div class="other-content">
@@ -124,7 +124,7 @@
 
           <div class="form-control">
             <label for="contact-name">Name</label>
-            <input type="text" id="contact-name" placeholder="Your Name">
+            <input type="text" id="contact-name" placeholder="Your Name" autocomplete="given-name" name="contact-name">
             <small id="error-message">Error Message</small>
           </div>
 

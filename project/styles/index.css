@@ -240,9 +240,9 @@ main {
 }
 
 .stream-card span {
-  /* font-weight: bold; */
+  font-weight: bold;
   color: var(--secondary-color);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .stream-card img {
@@ -271,7 +271,7 @@ main {
 }
 
 .testimonial-box {
-  background: #fff;
+  background: var(--primary-color);
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 8px;
@@ -279,10 +279,10 @@ main {
   overflow: hidden;
 }
 
-.testimonials h2 {
+.testimonials h3,
+.map h3 {
   color: var(--accent1-color);
-  margin-top: -2rem;
-  padding-top: 1rem;
+  text-align: center;
 }
 
 .testimonial-box h4 {
@@ -459,12 +459,6 @@ input[type="submit"]:focus,
 #newsletter-form div input:focus {
   outline: none;
   border: none;
-}
-
-.map h2 {
-  color: var(--accent1-color);
-  margin-top: -2.2rem;
-  padding-top: 1rem;
 }
 
 iframe {
@@ -700,7 +694,8 @@ footer {
   }
 
   .testimonial-box {
-    height: 196px;
+    height: 200px;
+    margin-top: 1.3rem;
     width: 100%;
     padding: 15px;
     max-width: 100%;
@@ -708,10 +703,8 @@ footer {
     box-shadow: 1px 1px 4px rgba(20, 27, 65, 0.6);
   }
 
-  .testimonials h2,
-  .map h2,
-  .maps h2 {
-    text-align: center;
+  .map h3 {
+    transform: translateY(-1.3rem);
   }
 
   .testimonial-box h4 {
@@ -720,13 +713,13 @@ footer {
   }
 
   .map iframe,
-  .maps iframe,
-  .maps h2 .map h2 {
+  .maps iframe {
     transform: translate(0.6rem, -1.2rem);
   }
 
   .newsletter {
     width: 100%;
+    margin-top: 1.85rem;
   }
 
   .mission-box h2 {
@@ -749,10 +742,6 @@ footer {
 
   .form-background {
     background-color: rgba(20, 27, 65, 0.9);
-    /* background-image: url("../images/desktop-college-student-admission(1).webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     min-height: 100vh;
     backdrop-filter: blur(3px);
   }
@@ -760,7 +749,6 @@ footer {
   .form-background #newsletter-form {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     padding-left: 3.5rem;
   }
@@ -798,18 +786,19 @@ footer {
     font-size: 1.2rem;
   }
 
+  .stream-card p {
+    font-size: 1.15rem;
+  }
+
+  .stream-card span {
+    font-size: 1.2rem;
+  }
+
+  .stream-card a {
+    font-size: 1.2rem;
+  }
+
   footer {
     font-size: 1.3rem;
   }
-
-  /* 
-  .hero h1,
-  .hero .tagline,
-  .hero .cta-btn {
-    margin-left: 40px;
-  }
-
-  .hero>*:not(picture) {
-    flex: 1;
-  } */
 }
