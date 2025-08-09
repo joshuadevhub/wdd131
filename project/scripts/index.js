@@ -75,7 +75,7 @@ function createStreamCard(filteredCard) {
     streamCategory.innerHTML = `<span>Category:</span> ${stream.category}`;
     streamDescription.innerHTML = `<span>Description:</span> ${stream.desc}`;
     streamImage.setAttribute("src", stream.img)
-    streamImage.setAttribute("alt", `${stream.title} Image`);
+    streamImage.setAttribute("alt", `${stream.title} Course Image`);
     streamImage.setAttribute("loading", "lazy")
     streamImage.setAttribute("id", "stream-img");
     streamAnchor.setAttribute("href", "#")
