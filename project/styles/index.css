@@ -771,6 +771,10 @@ footer {
     display: none;
   }
 
+  .about-message {
+    transform: translateY(-30rem);
+  }
+
   .admission-form input[type="text"],
   .admission-form input[type="tel"],
   .admission-form input[type="email"],
