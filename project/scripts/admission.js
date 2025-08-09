@@ -44,7 +44,7 @@ modalClose.addEventListener("click", closeModal);
 admissionForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let valid = true;
 
   // first name
@@ -72,7 +72,9 @@ admissionForm.addEventListener("submit", function (e) {
   } else setSuccessFor(phone);
 
   // email
-  if (!emailRegex.test(emailAddress.value.trim())) {
+  if (emailAddress.value.trim() === '') {
+    setErrorFor(emailAddress, "Email Cannot Be Empty!")
+  } else if (!emailRegex.test(emailAddress.value.trim())) {
     setErrorFor(emailAddress, "Enter a valid email");
     valid = false;
   } else setSuccessFor(emailAddress);
@@ -91,7 +93,7 @@ admissionForm.addEventListener("submit", function (e) {
 
   // ✅ if everything is valid finally → show modal + save data
   if (valid) {
-    openModal("Your application has been received!");
+    openModal(`Your application has been received ${firstName.value} ${lastName.value}. Thank You For Joining EMC!`);
     const formData = {
       firstName: firstName.value,
       lastName: lastName.value,
